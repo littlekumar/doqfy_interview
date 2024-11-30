@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Nifty 50</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 30%;
+            margin: 20px;
+            float: left;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nifty 50</h1>
+    {% for item in data %}
+        <div class="card">
+            <div class="container">
+                <p>Symbol: {{ item.symbol }}</p>
+                <p>Name: {{ item.name }}</p>
+                <p>Price: {{ item.price }}</p>
+                <p>Change: {{ item.change }}</p>
+                <p>Percent Change: {{ item.percent_change }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</body>
+</html>
